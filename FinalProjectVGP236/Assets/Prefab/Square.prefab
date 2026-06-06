@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 1510339315609743575}
   - component: {fileID: 5886619257075936036}
   m_Layer: 0
-  m_Name: Fuck Ice
+  m_Name: Square
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
