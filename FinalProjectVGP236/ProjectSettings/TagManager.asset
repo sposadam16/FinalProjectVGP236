@@ -4,11 +4,7 @@
 TagManager:
   serializedVersion: 3
   tags:
-  - Fish
-  - Enemy
-  - Water
-  - Ship
-  - Sky
+  - Wall
   layers:
   - Default
   - TransparentFX
@@ -45,18 +41,6 @@ TagManager:
   m_SortingLayers:
   - name: Default
     uniqueID: 0
-    locked: 0
-  - name: Background
-    uniqueID: 3807474777
-    locked: 0
-  - name: World
-    uniqueID: 2153199181
-    locked: 0
-  - name: Player
-    uniqueID: 3425373647
-    locked: 0
-  - name: UI
-    uniqueID: 1480025265
     locked: 0
   m_RenderingLayers:
   - Default
