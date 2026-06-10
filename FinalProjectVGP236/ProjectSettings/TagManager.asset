@@ -2,8 +2,13 @@
 %TAG !u! tag:unity3d.com,2011:
 --- !u!78 &1
 TagManager:
-  serializedVersion: 2
-  tags: []
+  serializedVersion: 3
+  tags:
+  - Fish
+  - Enemy
+  - Water
+  - Ship
+  - Sky
   layers:
   - Default
   - TransparentFX
@@ -11,11 +16,11 @@ TagManager:
   - 
   - Water
   - UI
-  - 
-  - 
-  - 
-  - 
-  - 
+  - Player
+  - Fish
+  - Enemy
+  - Ship
+  - Sky
   - 
   - 
   - 
@@ -41,3 +46,18 @@ TagManager:
   - name: Default
     uniqueID: 0
     locked: 0
+  - name: Background
+    uniqueID: 3807474777
+    locked: 0
+  - name: World
+    uniqueID: 2153199181
+    locked: 0
+  - name: Player
+    uniqueID: 3425373647
+    locked: 0
+  - name: UI
+    uniqueID: 1480025265
+    locked: 0
+  m_RenderingLayers:
+  - Default
+  m_MigratedRenderPipelines: []
