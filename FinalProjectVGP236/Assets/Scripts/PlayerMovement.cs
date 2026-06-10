@@ -70,8 +70,11 @@ public class PlayerMovement : MonoBehaviour
 
             Debug.Log("Player State: Swimming");
         }
+    }
 
-        if (collision.CompareTag("Ship"))
+    private void OnTriggerExit2D(Collider2D collision)
+    {
+        if (collision.CompareTag("Water"))
         {
             _currentState = PlayerState.OnBoat;
 
