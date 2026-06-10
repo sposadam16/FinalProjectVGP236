@@ -3,17 +3,29 @@ using UnityEngine;
 public class FishFlee : MonoBehaviour
 {
     [Header("Flee Settings")]
-    public float detectionRange = 3f;   // How close the player must be
-    public float fleeSpeedMultiplier = 2f; // How much faster the fish swims when fleeing
+    public float detectionRange = 3f;     
+    public float fleeSpeedMultiplier = 2f;     
+    public float turnSpeed = 5f;               
 
     private Transform player;
     private Fish fish;
     private bool isFleeing = false;
+    private float originalSpeed;
 
     void Start()
     {
-        player = GameObject.FindGameObjectWithTag("Player").transform;
+        GameObject p = GameObject.FindGameObjectWithTag("Player");
+        if (p != null)
+        {
+            player = p.transform;
+        }
+        else
+        {
+            Debug.LogError("FishFlee: No object with tag 'Player' found in the scene!");
+        }
+
         fish = GetComponent<Fish>();
+        originalSpeed = fish.swimSpeed;
     }
     void Update()
     {
@@ -23,23 +35,24 @@ public class FishFlee : MonoBehaviour
 
         if (distance < detectionRange)
         {
-            StartFleeing();
+            FleeFromPlayer();
         }
         else
         {
             StopFleeing();
         }
     }
-    void StartFleeing()
+    void FleeFromPlayer()
     {
-        if (isFleeing) return;
+        if (!isFleeing)
+        {
+            isFleeing = true;
+            fish.swimSpeed = originalSpeed * fleeSpeedMultiplier;
+        }
+        Vector2 fleeDirection = (transform.position - player.position).normalized;
 
-        isFleeing = true;
-        fish.swimSpeed *= fleeSpeedMultiplier;
-
-        // Flip direction AWAY from player
-        Vector2 direction = (transform.position - player.position).normalized;
-        transform.right = direction;
+        Vector3 newDir = Vector3.Lerp(transform.right, fleeDirection, Time.deltaTime * turnSpeed);
+        transform.right = newDir;
     }
 
     void StopFleeing()
@@ -47,6 +60,6 @@ public class FishFlee : MonoBehaviour
         if (!isFleeing) return;
 
         isFleeing = false;
-        fish.swimSpeed /= fleeSpeedMultiplier;
+        fish.swimSpeed = originalSpeed;
     }
 }
