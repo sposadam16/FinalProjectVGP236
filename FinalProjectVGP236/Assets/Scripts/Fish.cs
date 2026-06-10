@@ -28,7 +28,6 @@ public class Fish : MonoBehaviour
         float yOffset = Mathf.Sin((Time.time + timeOffset) * wiggleFrequency) * wiggleAmplitude;
         transform.position = new Vector3(transform.position.x, startPos.y + yOffset, transform.position.z);
     }
-
     public int CatchFish()
     {
         Destroy(gameObject);

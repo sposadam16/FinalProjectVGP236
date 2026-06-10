@@ -179,8 +179,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3081f7e15a1744240b4e92503131cf80, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Fish
-  fishName: Basic Fish
-  value: 10
-  swimSpeed: 2
-  wiggleAmplitude: 0.2
-  wiggleFrequency: 2
+  fishName: Fish
+  value: 0
+  swimSpeed: 0
+  wiggleAmplitude: 0
+  wiggleFrequency: 0
