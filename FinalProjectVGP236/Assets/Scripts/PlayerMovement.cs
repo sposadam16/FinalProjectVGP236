@@ -18,7 +18,7 @@ public class PlayerMovement : MonoBehaviour
 
     private Vector2 _moveInput = Vector2.zero;
 
-    private PlayerState _currentState = PlayerState.OnBoat; 
+    private PlayerState _currentState = PlayerState.OnBoat;
 
     private void Awake()
     {
@@ -48,9 +48,36 @@ public class PlayerMovement : MonoBehaviour
         if (_currentState == PlayerState.OnBoat)
         {
             _rigidbody.linearVelocity =
-        new Vector2(
-        _moveInput.x * _moveSpeed,
-        _rigidbody.linearVelocity.y);
+                new Vector2(
+                    _moveInput.x * _moveSpeed,
+                    _rigidbody.linearVelocity.y);
+        }
+
+        if (_currentState == PlayerState.Swimming)
+        {
+            _rigidbody.linearVelocity =
+                _moveInput * _moveSpeed;
+        }
+    }
+
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.CompareTag("Water"))
+        {
+            _currentState = PlayerState.Swimming;
+
+            _rigidbody.gravityScale = 0.0f;
+
+            Debug.Log("Player State: Swimming");
+        }
+
+        if (collision.CompareTag("Ship"))
+        {
+            _currentState = PlayerState.OnBoat;
+
+            _rigidbody.gravityScale = 1.0f;
+
+            Debug.Log("Player State: OnBoat");
         }
     }
 }
