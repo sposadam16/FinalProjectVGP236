@@ -3,43 +3,65 @@ using UnityEngine;
 public class FishFlee : MonoBehaviour
 {
     [Header("Flee Settings")]
-    public float detectionRange = 3f;   // How close the player must be
-    public float fleeSpeedMultiplier = 2f; // How much faster the fish swims when fleeing
+    public float detectionRange = 3f;
+    public float fleeSpeedMultiplier = 2f;
+    public float turnSpeed = 5f;
 
     private Transform player;
     private Fish fish;
     private bool isFleeing = false;
+    private float originalSpeed;
 
     void Start()
     {
-        player = GameObject.FindGameObjectWithTag("Player").transform;
+        // Try to find player, but don't crash if missing
+        GameObject p = GameObject.FindGameObjectWithTag("Player");
+        if (p != null)
+        {
+            player = p.transform;
+        }
+
         fish = GetComponent<Fish>();
+        originalSpeed = fish.swimSpeed;
     }
+
     void Update()
     {
-        if (player == null) return;
+        // If player doesn't exist yet, do nothing
+        if (player == null)
+        {
+            TryFindPlayerAgain();
+            return;
+        }
 
         float distance = Vector2.Distance(transform.position, player.position);
 
         if (distance < detectionRange)
-        {
-            StartFleeing();
-        }
+            FleeFromPlayer();
         else
-        {
             StopFleeing();
-        }
     }
-    void StartFleeing()
+
+    void TryFindPlayerAgain()
     {
-        if (isFleeing) return;
+        // This lets the fish detect the player later when you add it
+        GameObject p = GameObject.FindGameObjectWithTag("Player");
+        if (p != null)
+            player = p.transform;
+    }
 
-        isFleeing = true;
-        fish.swimSpeed *= fleeSpeedMultiplier;
+    void FleeFromPlayer()
+    {
+        if (!isFleeing)
+        {
+            isFleeing = true;
+            fish.swimSpeed = originalSpeed * fleeSpeedMultiplier;
+        }
 
-        // Flip direction AWAY from player
-        Vector2 direction = (transform.position - player.position).normalized;
-        transform.right = direction;
+        Vector2 fleeDirection = (transform.position - player.position).normalized;
+
+        Vector3 newDir = Vector3.Lerp(transform.right, fleeDirection, Time.deltaTime * turnSpeed);
+        transform.right = newDir;
     }
 
     void StopFleeing()
@@ -47,6 +69,6 @@ public class FishFlee : MonoBehaviour
         if (!isFleeing) return;
 
         isFleeing = false;
-        fish.swimSpeed /= fleeSpeedMultiplier;
+        fish.swimSpeed = originalSpeed;
     }
 }
