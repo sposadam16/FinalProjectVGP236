@@ -1,19 +1,14 @@
 using UnityEngine;
+using TMPro;
 
 public class MoneyManager : MonoBehaviour
 {
-    public static MoneyManager instance;
-
     public int money = 0;
-    public TopRightUI ui;
+    public TextMeshProUGUI moneyText;
 
-    void Awake()
-    {
-        instance = this;
-    }
     void Start()
     {
-        Invoke(nameof(UpdateMoneyUI), 0.05f);
+        UpdateMoneyUI();
     }
 
     public void AddMoney(int amount)
@@ -21,14 +16,14 @@ public class MoneyManager : MonoBehaviour
         money += amount;
         UpdateMoneyUI();
     }
+    public void RemoveMoney(int amount)
+    {
+        money -= amount;
+        if (money < 0) money = 0;
+        UpdateMoneyUI();
+    }
     void UpdateMoneyUI()
     {
-        if (ui == null)
-        {
-            Debug.LogWarning("MoneyManager: UI reference missing!");
-            return;
-        }
-
-        ui.SetText("Cash: " + money);
+        moneyText.text = money.ToString();
     }
 }
