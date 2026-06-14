@@ -181,6 +181,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::Fish
   fishName: Fish
   value: 0
-  swimSpeed: 0
-  wiggleAmplitude: 0
-  wiggleFrequency: 0
+  swimSpeed: 2
+  wiggleAmplitude: 1
+  wiggleFrequency: 1

@@ -7,6 +7,8 @@ public class FishInventory : MonoBehaviour
     public void AddFish()
     {
         fishCount++;
+
+        Debug.Log("Fish Count: " + fishCount);
     }
 
     public int SellAllFish()
