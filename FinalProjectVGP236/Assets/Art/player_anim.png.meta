@@ -147,7 +147,7 @@ TextureImporter:
       name: player_anim_1
       rect:
         serializedVersion: 2
-        x: 54
+        x: 57
         y: 0
         width: 41
         height: 49
@@ -169,7 +169,7 @@ TextureImporter:
       name: player_anim_2
       rect:
         serializedVersion: 2
-        x: 108
+        x: 110
         y: 0
         width: 41
         height: 49
@@ -191,9 +191,9 @@ TextureImporter:
       name: player_anim_3
       rect:
         serializedVersion: 2
-        x: 162
+        x: 165
         y: 0
-        width: 41
+        width: 38
         height: 49
       alignment: 0
       pivot: {x: 0.5, y: 0.5}

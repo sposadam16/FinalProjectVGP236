@@ -106,6 +106,7 @@ GameObject:
   - component: {fileID: 3272776869756153850}
   - component: {fileID: 1042993984435634905}
   - component: {fileID: 278760619930277761}
+  - component: {fileID: 8151424287165187296}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -234,6 +235,28 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::FishInventory
   fishCount: 0
+--- !u!95 &8151424287165187296
+Animator:
+  serializedVersion: 7
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5808382799103219286}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 1831f79b15eb88744b444d4ac0356a10, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_AnimatePhysics: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1 &7795597882640700179
 GameObject:
   m_ObjectHideFlags: 0
