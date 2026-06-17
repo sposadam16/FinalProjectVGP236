@@ -1,10 +1,16 @@
 fileFormatVersion: 2
-guid: 75a7dcac733fba344b02b991602b0717
+guid: 701fa54cbc89c6745919dfda3b89b0d2
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -1009067552324890714
-    second: money_ui_0
+      213: 1564688358316481467
+    second: hearts_0
+  - first:
+      213: 5726080727020278575
+    second: hearts_1
+  - first:
+      213: 8522625820373494394
+    second: hearts_2
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -113,23 +119,67 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: money_ui_0
+      name: hearts_full
       rect:
         serializedVersion: 2
-        x: 15
-        y: 15
-        width: 81
-        height: 23
+        x: 8
+        y: 8
+        width: 23
+        height: 21
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 6af4d4d48621ff1f0800000000000000
-      internalID: -1009067552324890714
+      spriteID: bbb94a595c3e6b510800000000000000
+      internalID: 1564688358316481467
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: hearts_1
+      rect:
+        serializedVersion: 2
+        x: 35
+        y: 7
+        width: 25
+        height: 23
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f2311494510277f40800000000000000
+      internalID: 5726080727020278575
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: hearts_empty
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 8
+        width: 23
+        height: 21
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a7a2fe06703764670800000000000000
+      internalID: 8522625820373494394
       vertices: []
       indices: 
       edges: []
@@ -138,7 +188,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 
+    spriteID: e5c93983683763d4ebc15f962f9cd79d
     internalID: 0
     vertices: []
     indices: 
@@ -148,7 +198,9 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      money_ui_0: -1009067552324890714
+      hearts_1: 5726080727020278575
+      hearts_empty: 8522625820373494394
+      hearts_full: 1564688358316481467
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
