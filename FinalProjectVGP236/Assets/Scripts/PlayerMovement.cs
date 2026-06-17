@@ -41,6 +41,15 @@ public class PlayerMovement : MonoBehaviour
     private void Update()
     {
         _moveInput = _moveAction.ReadValue<Vector2>();
+
+        if (_moveInput.x > 0)
+        {
+            transform.localScale = new Vector3(-1, 1, 1);
+        }
+        else if (_moveInput.x < 0)
+        {
+            transform.localScale = new Vector3(1, 1, 1);
+        }
     }
 
     private void FixedUpdate()
@@ -68,7 +77,7 @@ public class PlayerMovement : MonoBehaviour
 
             _rigidbody.gravityScale = 0.0f;
 
-            Debug.Log("Player State: Swimming");
+
         }
     }
 
@@ -80,7 +89,7 @@ public class PlayerMovement : MonoBehaviour
 
             _rigidbody.gravityScale = 1.0f;
 
-            Debug.Log("Player State: OnBoat");
+
         }
     }
 }
