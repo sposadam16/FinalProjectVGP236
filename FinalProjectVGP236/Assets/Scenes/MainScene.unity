@@ -255,7 +255,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 1, y: 1}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -215, y: -79.9}
+  m_AnchoredPosition: {x: -1660, y: -79.899994}
   m_SizeDelta: {x: 240, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &333022896
@@ -6358,7 +6358,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -557.6, y: 289.77}
+  m_AnchoredPosition: {x: -844, y: 324.3}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1716646104
@@ -6374,8 +6374,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::LivesUI
   heartPrefab: {fileID: 5061039659733164655, guid: c59f280d9ac9f884088ed16db4f99b56, type: 3}
-  fullHeart: {fileID: -205270267638800340, guid: 1927eae546966734bb8e16516b111509, type: 3}
-  emptyHeart: {fileID: 7904136456745960365, guid: 1927eae546966734bb8e16516b111509, type: 3}
+  fullHeart: {fileID: 1564688358316481467, guid: 701fa54cbc89c6745919dfda3b89b0d2, type: 3}
+  emptyHeart: {fileID: 8522625820373494394, guid: 701fa54cbc89c6745919dfda3b89b0d2, type: 3}
   livesManager: {fileID: 1929433021}
 --- !u!114 &1716646105
 MonoBehaviour:
@@ -6451,7 +6451,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 1, y: 1}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -244.61365, y: -79.9}
+  m_AnchoredPosition: {x: -1680.5, y: -79.9}
   m_SizeDelta: {x: 377.6346, y: 114.709}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1768861787
@@ -6474,7 +6474,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: -8707843558820826522, guid: 41ef184c5dc4ead41b640bb1a507e488, type: 3}
+  m_Sprite: {fileID: -1009067552324890714, guid: 75a7dcac733fba344b02b991602b0717, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
