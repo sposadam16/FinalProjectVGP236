@@ -12,6 +12,9 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField]
     private float _moveSpeed = 5.0f;
 
+    private Animator _animator;
+
+
     private Rigidbody2D _rigidbody = null;
     private InputSystem_Actions _playerInput = null;
     private InputAction _moveAction = null;
@@ -22,6 +25,8 @@ public class PlayerMovement : MonoBehaviour
 
     private void Awake()
     {
+        _animator = GetComponent<Animator>();
+
         _rigidbody = GetComponent<Rigidbody2D>();
 
         _playerInput = new InputSystem_Actions();
@@ -76,7 +81,7 @@ public class PlayerMovement : MonoBehaviour
             _currentState = PlayerState.Swimming;
 
             _rigidbody.gravityScale = 0.0f;
-
+            _animator.SetBool("IsSwimming", true);
 
         }
     }
@@ -88,6 +93,7 @@ public class PlayerMovement : MonoBehaviour
             _currentState = PlayerState.OnBoat;
 
             _rigidbody.gravityScale = 1.0f;
+            _animator.SetBool("IsSwimming", false);
 
 
         }
