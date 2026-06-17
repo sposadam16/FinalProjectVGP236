@@ -337,7 +337,7 @@ MonoBehaviour:
   _attackPoint: {fileID: 5229316424016970692}
   _attackDistance: 0.5
   _attackRadius: 0.5
-  _harpoonAnimator: {fileID: 0}
+  _harpoonAnimator: {fileID: 4120103248906810435}
 --- !u!114 &278760619930277761
 MonoBehaviour:
   m_ObjectHideFlags: 0
