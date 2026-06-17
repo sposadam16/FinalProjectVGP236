@@ -57,7 +57,7 @@ public class PlayerAttack : MonoBehaviour
         _attackPoint.position =
             transform.position +
             (Vector3)(direction * _attackDistance);
-    }
+    }   
 
     private void OnAttack(InputAction.CallbackContext context)
     {
