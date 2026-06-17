@@ -3,14 +3,17 @@ using UnityEngine.InputSystem;
 
 public class PlayerAttack : MonoBehaviour
 {
-
     [SerializeField]
     private Transform _attackPoint = null;
 
     [SerializeField]
     private float _attackDistance = 0.5f;
+
     [SerializeField]
     private float _attackRadius = 0.5f;
+
+    [SerializeField]
+    private Animator _harpoonAnimator = null;
 
     private InputSystem_Actions _playerInput = null;
     private InputAction _attackAction = null;
@@ -58,7 +61,10 @@ public class PlayerAttack : MonoBehaviour
 
     private void OnAttack(InputAction.CallbackContext context)
     {
-        Debug.Log("STAB!");
+        if (_harpoonAnimator != null)
+        {
+            _harpoonAnimator.SetTrigger("Attack");
+        }
 
         Collider2D[] hits = Physics2D.OverlapCircleAll(
             _attackPoint.position,
@@ -71,11 +77,22 @@ public class PlayerAttack : MonoBehaviour
             if (fish != null)
             {
                 fish.CatchFish();
-
-                Debug.Log("Fish Captured!");
-
                 break;
             }
         }
+    }
+
+    private void OnDrawGizmosSelected()
+    {
+        if (_attackPoint == null)
+        {
+            return;
+        }
+
+        Gizmos.color = Color.red;
+
+        Gizmos.DrawWireSphere(
+            _attackPoint.position,
+            _attackRadius);
     }
 }
