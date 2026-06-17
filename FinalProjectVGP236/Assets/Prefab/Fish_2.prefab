@@ -21,12 +21,28 @@ PrefabInstance:
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: -5808648776544449859, guid: 946aab91a32733641813532d25268f6d, type: 3}
+      propertyPath: canDealDamage
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: -5808648776544449859, guid: 946aab91a32733641813532d25268f6d, type: 3}
       propertyPath: wiggleAmplitude
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: -5808648776544449859, guid: 946aab91a32733641813532d25268f6d, type: 3}
       propertyPath: wiggleFrequency
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 129746784814315457, guid: 946aab91a32733641813532d25268f6d, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 0.8
+      objectReference: {fileID: 0}
+    - target: {fileID: 129746784814315457, guid: 946aab91a32733641813532d25268f6d, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 0.8
+      objectReference: {fileID: 0}
+    - target: {fileID: 129746784814315457, guid: 946aab91a32733641813532d25268f6d, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 0.8
       objectReference: {fileID: 0}
     - target: {fileID: 129746784814315457, guid: 946aab91a32733641813532d25268f6d, type: 3}
       propertyPath: m_LocalPosition.x
@@ -72,6 +88,34 @@ PrefabInstance:
       propertyPath: m_Name
       value: Fish_2
       objectReference: {fileID: 0}
+    - target: {fileID: 4522548144966487221, guid: 946aab91a32733641813532d25268f6d, type: 3}
+      propertyPath: m_BodyType
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5437054536638913125, guid: 946aab91a32733641813532d25268f6d, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: -8438666135856754505, guid: 53841599d4d39eb43a79b16151cf77bc, type: 3}
+    - target: {fileID: 7290025291830242130, guid: 946aab91a32733641813532d25268f6d, type: 3}
+      propertyPath: m_Size.x
+      value: 0.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 7290025291830242130, guid: 946aab91a32733641813532d25268f6d, type: 3}
+      propertyPath: m_Size.y
+      value: 0.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 7290025291830242130, guid: 946aab91a32733641813532d25268f6d, type: 3}
+      propertyPath: m_IsTrigger
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7290025291830242130, guid: 946aab91a32733641813532d25268f6d, type: 3}
+      propertyPath: m_SpriteTilingProperty.oldSize.x
+      value: 0.8125
+      objectReference: {fileID: 0}
+    - target: {fileID: 7290025291830242130, guid: 946aab91a32733641813532d25268f6d, type: 3}
+      propertyPath: m_SpriteTilingProperty.oldSize.y
+      value: 0.40625
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -79,6 +123,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 2990735127004424673, guid: 946aab91a32733641813532d25268f6d, type: 3}
       insertIndex: -1
       addedObject: {fileID: 6485627494844061922}
+    - targetCorrespondingSourceObject: {fileID: 2990735127004424673, guid: 946aab91a32733641813532d25268f6d, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 6234170264496341963}
   m_SourcePrefab: {fileID: 100100000, guid: 946aab91a32733641813532d25268f6d, type: 3}
 --- !u!1 &705617531364613864 stripped
 GameObject:
@@ -99,3 +146,26 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::FishFlee
   detectionRange: 3
   fleeSpeedMultiplier: 2
+  turnSpeed: 5
+--- !u!95 &6234170264496341963
+Animator:
+  serializedVersion: 7
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 705617531364613864}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 6716c9b990a4adc418d45d071c7a7cc2, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_AnimatePhysics: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0

@@ -9,9 +9,12 @@ public class Fish : MonoBehaviour
     public float wiggleAmplitude = 0.2f;
     public float wiggleFrequency = 2f;
 
+    [Header("Damage Settings")]
+    public bool canDealDamage = false;
+    public float pushStrength = 0.3f;
+
     private Vector3 startPos;
     private float timeOffset;
-
     private int direction = 1;
 
     void Start()
@@ -42,6 +45,18 @@ public class Fish : MonoBehaviour
             Vector3 scale = transform.localScale;
             scale.x *= -1;
             transform.localScale = scale;
+        }
+        if (other.CompareTag("Player"))
+        {
+            Vector3 push = (transform.position - other.transform.position).normalized * pushStrength;
+            transform.position += push;
+
+            if (canDealDamage)
+            {
+                LivesManager.instance.LoseLife();   
+            }
+
+            CatchFish();
         }
     }
 
